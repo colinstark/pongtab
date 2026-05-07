@@ -1,0 +1,85 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  background: #0a0a0f;
+  color: #fff;
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.container { text-align: center; }
+h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+.status {
+  font-size: 0.9rem;
+  color: #888;
+  margin-bottom: 1rem;
+  min-height: 1.5em;
+}
+.status.waiting { color: #f90; }
+.status.ready { color: #0f0; }
+.status.paused { color: #f00; }
+.status.your-turn { color: #0ff; }
+#gameCanvas {
+  border: 2px solid #333;
+  background: #111;
+}
+.info {
+  margin-top: 1rem;
+  font-size: 0.75rem;
+  color: #555;
+}
+.score-display {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  margin-bottom: 0.5rem;
+  font-size: 2rem;
+}
+.score-display .player {
+  opacity: 0.3;
+  transition: opacity 0.3s;
+}
+.score-display .player.active {
+  opacity: 1;
+}
+.score-display .player1 { color: #4af; }
+.score-display .player2 { color: #f4a; }
+.player-label {
+  font-size: 0.7rem;
+  margin-bottom: 0.25rem;
+  color: #666;
+}
+.overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0,0,0,0.9);
+  padding: 2rem 3rem;
+  border: 1px solid #333;
+  text-align: center;
+  z-index: 10;
+}
+.overlay.hidden { display: none; }
+.overlay h2 { margin-bottom: 1rem; color: #0ff; }
+.overlay p { color: #888; font-size: 0.85rem; }
+.zone-indicator {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.7rem;
+  color: #333;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  letter-spacing: 0.3em;
+}
+.zone-left { left: 10px; }
+.zone-right { right: 10px; }

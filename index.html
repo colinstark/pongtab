@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tab Pong</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Tab Pong</h1>
+    <div class="status" id="status">Initializing...</div>
+    <div class="score-display">
+      <div>
+        <div class="player-label">PLAYER 1</div>
+        <div class="player player1" id="score1">0</div>
+      </div>
+      <div>
+        <div class="player-label">PLAYER 2</div>
+        <div class="player player2" id="score2">0</div>
+      </div>
+    </div>
+    <div style="position: relative; display: inline-block;">
+      <canvas id="gameCanvas" width="800" height="500"></canvas>
+      <div class="zone-indicator zone-left">P1 ZONE</div>
+      <div class="zone-indicator zone-right">P2 ZONE</div>
+    </div>
+    <div class="info" id="info">Open another tab to start playing</div>
+    <div style="margin-top: 0.5rem; font-size: 0.7rem; color: #444;">Controls: Mouse or W/S / ↑↓ keys</div>
+    <button id="restartBtn" style="margin-top: 0.75rem; padding: 0.5rem 1.5rem; font-family: inherit; font-size: 0.8rem; background: #222; color: #888; border: 1px solid #333; cursor: pointer; transition: all 0.2s;">Restart Game</button>
+    <div class="overlay hidden" id="overlay">
+      <h2 id="overlayTitle">SWITCH TAB!</h2>
+      <p id="overlayText">Ball is in Player 2's zone</p>
+    </div>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
